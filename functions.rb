@@ -30,12 +30,28 @@ def sum_only_numbers(an_array)
 	 return sum
 end
 
-#
+#For i from 1 to 100 array
 #
 # use when or if else
+def fizzbuzz
+	output=Array.new
+	range =*(1..100)
+		range.each do |i|
+		if (i % 3 == 0 && i % 5 == 0)
+			output.push("FizzBuzz")
+		elsif i % 3 == 0
+			output.push("Fizz")
+		elsif i % 5 == 0
+			output.push("Buzz")
+		else
+			output.push(i)
+		end
 
+	end
+return output      	
+end 
 # Uncomment each of these to test your functions
  puts reverse([3,6,'dog']).inspect
  puts histogram('The Quick brown fox').inspect
  puts sum_only_numbers [4, 'foo', [], 27, :rain, 3.14]
-# puts fizzbuzz.join("\n")
+ puts fizzbuzz.join("\n")
