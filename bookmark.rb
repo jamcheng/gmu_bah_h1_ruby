@@ -1,16 +1,19 @@
 class Bookmark
-	def bookmark
 		attr_accessor :url, :title
 		attr_reader :last_visited
+		
+	def initialize(url, title)
+		@url = url
+		@title = title
+		@last_visited=Time.new
 	end
-	def intialize(url, title, last_visited)
-		@url = url.new
-		@title = title.new
-		@last_visited=time.new
-	end
-	def visit!(last_visited)
-		last_visited=last_visited.time.now
+	def visit!
+		last_visited
 	end
 end
 ##test below- results in NoMethod error 
-puts intialize('https://google.com','search window').inspect
+#bookmark= Bookmark.new("https://google.com","search window")
+#puts bookmark.url
+#puts bookmark.title
+#puts bookmark.visit!
+#puts bookmark.visit!
