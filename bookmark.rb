@@ -12,4 +12,5 @@ class Bookmark
 		last_visited=last_visited.time.now
 	end
 end
+##test below- results in NoMethod error 
 puts intialize('https://google.com','search window').inspect
